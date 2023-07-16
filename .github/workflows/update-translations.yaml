@@ -5,7 +5,7 @@ on:
     types: [ locize/versionPublished ]
 
 jobs:
-  test2: Test
+  test2:
     name: Test
     runs-on: ubuntu-latest
     steps:
