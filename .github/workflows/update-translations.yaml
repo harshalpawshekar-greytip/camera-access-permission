@@ -23,6 +23,7 @@ jobs:
       - run: 'echo "field: ${{ github.event.client_payload.payload.version }}"'
       - run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
 
+
   test3:
     name: Update Translations
     runs-on: ubuntu-latest
