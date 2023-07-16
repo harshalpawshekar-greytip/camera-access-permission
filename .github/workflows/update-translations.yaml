@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: echo ${{ vars.LOCIZE_PROJECT_ID }}
+      - run: echo ${{ secrets.LOCIZE_PROJECT_ID }}
   test1:
     name: Update Translations
     runs-on: ubuntu-latest
     steps:
       - uses: locize/download@v1
         with:
-          project-id: ${{ vars.LOCIZE_PROJECT_ID }}
+          project-id: ${{ secrets.LOCIZE_PROJECT_ID }}
