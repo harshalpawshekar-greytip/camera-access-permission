@@ -12,3 +12,4 @@ jobs:
       - uses: locize/download@v1
         with:
           project-id: ${{ secrets.LOCIZE_PROJECT_ID }}
+          path: ./locales
