@@ -20,7 +20,7 @@ on:
 jobs:
   translation:
     name: Update translations
-    if: github.event.client_payload.payload.version == 'latest'
+    #if: github.event.client_payload.payload.version == 'latest'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -30,4 +30,3 @@ jobs:
         with:
           project-id: 22b86ae3-1ffe-4452-bae2-fa0301dd6622
           path: /locales
-          clean: true
