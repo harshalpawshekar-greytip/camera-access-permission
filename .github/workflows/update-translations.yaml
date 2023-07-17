@@ -29,4 +29,3 @@ jobs:
       - uses: locize/download@v1
         with:
           project-id: 22b86ae3-1ffe-4452-bae2-fa0301dd6622
-          path: /locales
