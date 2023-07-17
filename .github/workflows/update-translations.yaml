@@ -4,7 +4,18 @@ on:
   push:
     branches: [ main, dev ]
   repository_dispatch:
-    types: [ locize/versionPublished ]
+    types:
+      - locize/versionPublished
+      - locize/languageAdded
+      - locize/versionAdded
+      - locize/versionDeleted
+      - locize/referenceLanguageChanged
+      - locize/versionOverwrote
+      - locize/languageOverwrote
+      - locize/namespaceAdded
+      - locize/namespaceDeleted
+      - locize/namespaceCompleted
+      - locize/namespaceNotCompletedAnymore
 
 jobs:
   translation:
@@ -18,4 +29,5 @@ jobs:
       - uses: locize/download@v1
         with:
           project-id: 22b86ae3-1ffe-4452-bae2-fa0301dd6622
-          path: ./locales
+          path: /locales
+          clean: true
