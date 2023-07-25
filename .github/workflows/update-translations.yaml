@@ -1,27 +1,15 @@
 name: Update translations
 
 on:
-  push:
-    branches: [ main, dev ]
   repository_dispatch:
     types:
       - locize/versionPublished
-      - locize/languageAdded
-      - locize/versionAdded
-      - locize/versionDeleted
-      - locize/referenceLanguageChanged
-      - locize/versionOverwrote
-      - locize/languageOverwrote
-      - locize/namespaceAdded
-      - locize/namespaceDeleted
-      - locize/namespaceCompleted
-      - locize/namespaceNotCompletedAnymore
 
 jobs:
   translation:
     name: Update translations
     #if: github.event.client_payload.payload.version == 'latest'
-    runs-on: ubuntu-latest
+    runs-on: [ self-hosted, ubuntu-latest ]
     steps:
       - uses: actions/checkout@v3
       - run: 'echo "field: ${{ github.event.client_payload.payload.version }}"'
